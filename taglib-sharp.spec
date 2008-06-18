@@ -4,7 +4,7 @@ Group:          Development/Other
 Summary:        Metadata library for most common movie and music formats 
 Url:            http://taglib-sharp.com/
 Version:        2.0.3.0
-Release:        %mkrel 1
+Release:        %mkrel 2
 Source0:        http://www.taglib-sharp.com/Download/%name-%{version}.tar.gz
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
