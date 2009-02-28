@@ -3,7 +3,7 @@ License:        LGPLv2
 Group:          Development/Other
 Summary:        Metadata library for most common movie and music formats 
 Url:            http://taglib-sharp.com/
-Version:        2.0.3.1
+Version:        2.0.3.2
 Release:        %mkrel 1
 Source0:        http://download.banshee-project.org/%name/%version/%name-%{version}.tar.bz2
 BuildArch:      noarch
@@ -31,8 +31,9 @@ make
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
-mkdir -p $RPM_BUILD_ROOT/usr/share/pkgconfig
-mv $RPM_BUILD_ROOT/usr/lib/pkgconfig/* $RPM_BUILD_ROOT/usr/share/pkgconfig
+
+%check
+make test
 
 %clean
 rm -rf $RPM_BUILD_ROOT
