@@ -4,7 +4,7 @@ Group:          Development/Other
 Summary:        Metadata library for most common movie and music formats 
 Url:            http://download.banshee-project.org/taglib-sharp/
 Version:        2.0.3.7
-Release:        %mkrel 2
+Release:        %mkrel 3
 Source0:        http://download.banshee-project.org/%name/%version/%name-%{version}.tar.bz2
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -23,6 +23,7 @@ Aaron Bockover <abockover@novell.com>
 %package devel
 Summary: Development files for %name
 Group: Development/Other
+Requires: %name = %version-%release
 
 %description devel
 TagLib# is a metadata or "tag" reader and writer library that supports
