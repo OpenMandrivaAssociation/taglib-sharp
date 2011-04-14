@@ -3,12 +3,16 @@ License:        LGPLv2
 Group:          Development/Other
 Summary:        Metadata library for most common movie and music formats 
 Url:            http://download.banshee-project.org/taglib-sharp/
-Version:        2.0.3.7
-Release:        %mkrel 3
+Version:        2.0.4.0
+Release:        %mkrel 1
 Source0:        http://download.banshee-project.org/%name/%version/%name-%{version}.tar.bz2
+#gw missing from the tarball
+Source1: extractKey.cpp
+Source2: listData.cpp
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildRequires:  mono-devel
+BuildRequires:  libexiv2-devel
 
 %description
 TagLib# is a metadata or "tag" reader and writer library that supports
@@ -37,6 +41,7 @@ Aaron Bockover <abockover@novell.com>
 
 %prep
 %setup -q
+cp %SOURCE1 %SOURCE2 examples/
 
 %build
 ./configure --prefix=/usr --disable-docs
@@ -45,9 +50,6 @@ make
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
-
-%check
-make test
 
 %clean
 rm -rf $RPM_BUILD_ROOT
