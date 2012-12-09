@@ -48,11 +48,11 @@ cp %SOURCE1 %SOURCE2 examples/
 make
 
 %install
-rm -rf %{buildroot}
+rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 
 %clean
-rm -rf %{buildroot}
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-, root, root)
@@ -64,3 +64,57 @@ rm -rf %{buildroot}
 %files devel
 %defattr(-, root, root)
 %_prefix/share/pkgconfig/taglib-sharp.pc
+
+
+%changelog
+* Thu Apr 14 2011 Götz Waschk <waschk@mandriva.org> 2.0.4.0-1mdv2011.0
++ Revision: 652994
+- new version
+- add missing examples
+- update build deps
+- remove checks
+
+* Mon Aug 09 2010 Götz Waschk <waschk@mandriva.org> 2.0.3.7-3mdv2011.0
++ Revision: 567906
+- fix deps
+- split out devel package
+
+* Sun Mar 21 2010 Funda Wang <fwang@mandriva.org> 2.0.3.7-1mdv2010.1
++ Revision: 525997
+- update to new version 2.0.3.7
+
+* Fri Feb 26 2010 Funda Wang <fwang@mandriva.org> 2.0.3.6-1mdv2010.1
++ Revision: 511427
+- new version 2.0.3.6
+
+* Thu Jan 28 2010 Götz Waschk <waschk@mandriva.org> 2.0.3.4-1mdv2010.1
++ Revision: 497524
+- update to new version 2.0.3.4
+
+* Thu Oct 15 2009 Götz Waschk <waschk@mandriva.org> 2.0.3.3-1mdv2010.0
++ Revision: 457512
+- new version 2.0.3.3
+
+* Thu Sep 03 2009 Christophe Fergeau <cfergeau@mandriva.com> 2.0.3.2-2mdv2010.0
++ Revision: 427225
+- rebuild
+
+* Sat Feb 28 2009 Götz Waschk <waschk@mandriva.org> 2.0.3.2-1mdv2009.1
++ Revision: 346034
+- new version
+- reenable checks
+
+* Tue Jan 27 2009 Götz Waschk <waschk@mandriva.org> 2.0.3.1-1mdv2009.1
++ Revision: 334034
+- new version
+- fix source URL
+
+* Wed Jun 18 2008 Thierry Vignaud <tv@mandriva.org> 2.0.3.0-2mdv2009.0
++ Revision: 225608
+- rebuild
+
+* Wed Feb 20 2008 Götz Waschk <waschk@mandriva.org> 2.0.3.0-1mdv2008.1
++ Revision: 173330
+- import taglib-sharp
+
+

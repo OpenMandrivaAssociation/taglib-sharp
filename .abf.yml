@@ -1,4 +1,2 @@
 sources:
-  "extractKey.cpp:"	15f3df323572b523be4193d1c718f099e76bd464
-  "listData.cpp:"	2d330f444a1812a0be608c725b76ff07acbe15f0
-  "taglib-sharp-2.0.4.0.tar.bz2:"	66b3384239f6492006d1c262cb7f5a8b8b1084bf
+  "taglib-sharp-2.0.4.0.tar.bz2": 66b3384239f6492006d1c262cb7f5a8b8b1084bf
