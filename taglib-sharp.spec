@@ -4,7 +4,7 @@ Group:          Development/Other
 Summary:        Metadata library for most common movie and music formats 
 Url:            http://download.banshee-project.org/taglib-sharp/
 Version:        2.0.4.0
-Release:        3
+Release:        4
 Source0:        http://download.banshee-project.org/%name/%version/%name-%{version}.tar.bz2
 #gw missing from the tarball
 Source1: extractKey.cpp
