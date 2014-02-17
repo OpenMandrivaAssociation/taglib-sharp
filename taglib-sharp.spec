@@ -12,7 +12,7 @@ Source2: listData.cpp
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildRequires:  mono-devel
-BuildRequires:  libexiv-devel
+BuildRequires:  pkgconfig(exiv2)
 
 %description
 TagLib# is a metadata or "tag" reader and writer library that supports
