@@ -12,6 +12,11 @@ Source0:	http://download.banshee-project.org/%name/%version/%name-%{version}.tar
 #gw missing from the tarball
 Source1:	extractKey.cpp
 Source2:	listData.cpp
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(mono-nunit)
 
